@@ -5,7 +5,7 @@ module.exports = {
   development: {
     client: 'pg',
     connection: {
-      database : 'atreides_test'
+      database : 'bptracker_test'
     },
     pool: {
       min: 2,
