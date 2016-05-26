@@ -16,9 +16,9 @@ exports.seed = function(knex, Promise) {
       })
     ])
   }).then(function(){
-    return knex('blood_pressure_data').del().then(function(){
+    return knex('readings').del().then(function(){
       return Promise.all([
-        knex('blood_pressure_data').insert({
+        knex('readings').insert({
           user_id: 1,
           systolic: 125,
           diastolic: 85,
@@ -26,7 +26,7 @@ exports.seed = function(knex, Promise) {
           created_at: new Date(2016, 2, 15),
           updated_at: new Date(2016, 2, 15),
         }),
-        knex('blood_pressure_data').insert({
+        knex('readings').insert({
           user_id: 1,
           systolic: 120,
           diastolic: 80,
@@ -34,7 +34,7 @@ exports.seed = function(knex, Promise) {
           created_at: new Date(2016, 2, 16),
           updated_at: new Date(2016, 2, 16),
         }),
-        knex('blood_pressure_data').insert({
+        knex('readings').insert({
           user_id: 1,
           systolic: 110,
           diastolic: 80,
@@ -42,7 +42,7 @@ exports.seed = function(knex, Promise) {
           created_at: new Date(2016, 2, 17),
           updated_at: new Date(2016, 2, 17),
         }),
-        knex('blood_pressure_data').insert({
+        knex('readings').insert({
           user_id: 1,
           systolic: 118,
           diastolic: 80,
@@ -50,7 +50,7 @@ exports.seed = function(knex, Promise) {
           created_at: new Date(2016, 4, 10),
           updated_at: new Date(2016, 4, 10),
         }),
-        knex('blood_pressure_data').insert({
+        knex('readings').insert({
           user_id: 1,
           systolic: 125,
           diastolic: 90,
@@ -58,7 +58,7 @@ exports.seed = function(knex, Promise) {
           created_at: new Date(2016, 4, 11),
           updated_at: new Date(2016, 4, 11),
         }),
-        knex('blood_pressure_data').insert({
+        knex('readings').insert({
           user_id: 1,
           systolic: 122,
           diastolic: 85,
@@ -66,7 +66,7 @@ exports.seed = function(knex, Promise) {
           created_at: new Date(2016, 4, 12),
           updated_at: new Date(2016, 4, 12),
         }),
-        knex('blood_pressure_data').insert({
+        knex('readings').insert({
           user_id: 1,
           systolic: 125,
           diastolic: 85,
@@ -74,7 +74,7 @@ exports.seed = function(knex, Promise) {
           created_at: new Date(2016, 4, 13),
           updated_at: new Date(2016, 4, 13),
         }),
-        knex('blood_pressure_data').insert({
+        knex('readings').insert({
           user_id: 1,
           systolic: 128,
           diastolic: 87,
@@ -82,7 +82,7 @@ exports.seed = function(knex, Promise) {
           created_at: new Date(2016, 4, 14),
           updated_at: new Date(2016, 4, 14),
         }),
-        knex('blood_pressure_data').insert({
+        knex('readings').insert({
           user_id: 1,
           systolic: 125,
           diastolic: 84,
@@ -90,7 +90,7 @@ exports.seed = function(knex, Promise) {
           created_at: new Date(2016, 4, 15),
           updated_at: new Date(2016, 4, 15),
         }),
-        knex('blood_pressure_data').insert({
+        knex('readings').insert({
           user_id: 1,
           systolic: 128,
           diastolic: 82,

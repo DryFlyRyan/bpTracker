@@ -13,7 +13,7 @@ exports.up = function(knex, Promise) {
     table.timestamp('created_at');
     table.timestamp('updated_at');
   }).then(function(){
-    return knex.schema.createTable('blood_pressure_data', function(table) {
+    return knex.schema.createTable('readings', function(table) {
       table.increments().primary().unsigned();
       table.integer('user_id').references('id').inTable('users').onDelete('cascade');
       table.integer('systolic');
@@ -27,7 +27,7 @@ exports.up = function(knex, Promise) {
 };
 
 exports.down = function(knex, Promise) {
-    return knex.schema.dropTable('blood_pressure_data')
+    return knex.schema.dropTable('readings')
   .then(function(){
     return knex.schema.dropTable('users')
   })
