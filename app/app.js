@@ -1,34 +1,85 @@
-(function() {
-  'use strict';
-  angular.module('bp-app', [
-// Angular libraries
-    'ui.router',
-    'ngAnimate',
-// Foundation UI components
-    'foundation',
-// Routing with front matter
-    'foundation.dynamicRouting',
-// Transitioning between views
-    'foundation.dynamicRouting.animations'
-  ])
-    .config(config)
-    .run(run)
-  ;
-  config.$inject = ['$urlRouterProvider', '$locationProvider'];
-  function config($urlProvider, $locationProvider) {
-// Default to the index view if the URL loaded is not found
-    $urlProvider.otherwise('/');
-// Use this to enable HTML5 mode
-    $locationProvider.html5Mode({
-      enabled: false,
-      requireBase: false
-    });
-// Use this to set the prefix for hash-bangs
-// Example: example.com/#!/page
-    $locationProvider.hashPrefix('!');
+'use strict';
+console.log("Angular Starting Up");
+
+angular.module('bpBot', [
+  'oc.lazyLoad',
+  'ui.router',
+  'ngAnimate',
+  'angularMoment'
+]).config(['$stateProvider','$urlRouterProvider','$ocLazyLoadProvider', '$locationProvider', function($stateProvider,$urlRouterProvider,$ocLazyLoadProvider, $locationProvider){
+  console.log("Lazy Loading");
+
+  $ocLazyLoadProvider.config({
+    debug:false,
+    events:true
+  })
+
+  // $urlRouterProvider.otherwise('/dashboard/home');
+
+
+  $stateProvider
+    .state('home', {
+      url:'',
+      templateUrl: 'app/home/home.html',
+      resolve: {
+        loadMyDirectives:function($ocLazyLoad){
+          return $ocLazyLoad.load(
+            {
+              // Load Root CTRLs && SVCs
+              name: 'bpBot',
+              files: [
+
+              ]
+            }
+          ),
+          $ocLazyLoad.load(
+            {
+              name: 'moment',
+              files: [
+                'bower_components/moment/moment.js'
+              ]
+            }
+          ),
+          $ocLazyLoad.load(
+            {
+              name:'angular-moment',
+              files:[
+                'bower_components/angular-moment/angular-moment.js'
+              ]
+            }
+          );
+        }
+      }
+    })
+    .state('home.dashboard', {
+      url:'/dashboard',
+      // controller: 'DashboardCTRL',
+      templateUrl:'app/dashboard/dashboard.html',
+      resolve: {
+        loadMyFiles:function($ocLazyLoad) {
+          return $ocLazyLoad.load({
+            name: 'dashboard',
+            files:[
+              'app/dashboard/dashboard.js'
+            ]
+          })
+        }
+      }
+    })
+    .state('home.login', {
+      url:'/login',
+      controller: 'LoginCTRL',
+      templateUrl:'app/login/login.html',
+      resolve: {
+        loadMyFiles:function($ocLazyLoad) {
+          return $ocLazyLoad.load({
+            name: 'login',
+            files:[
+              'app/login/login.js'
+            ]
+          })
+        }
+      }
+    })
   }
-  function run() {
-// Enable FastClick to remove the 300ms click delay on touch devices
-    FastClick.attach(document.body);
-  }
-})();
+]);

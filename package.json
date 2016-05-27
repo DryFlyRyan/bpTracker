@@ -1,5 +1,5 @@
 {
-  "name": "bp-app",
+  "name": "bpBot",
   "version": "0.0.1",
   "description": "A simple MEAN app for tracking blood pressure readings.",
   "main": "server.js",
