@@ -34,6 +34,6 @@ app.use(apiRoot + '/readings', readingCRUD);
 // Server Functions
 server.listen(port, function() {
   console.log('Listening on ', port);
-})
+});
 
 module.exports = app;
