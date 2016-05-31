@@ -1,0 +1,200 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'postgres',
+1 verbose cli   '-S' ]
+2 info using npm@2.14.20
+3 info using node@v4.4.0
+4 verbose install initial load of /Users/ryandouglas/Dev/projects/bp-app/package.json
+5 warn package.json bp-bot@0.0.1 No repository field.
+6 verbose installManyTop reading scoped package data from /Users/ryandouglas/Dev/projects/bp-app/node_modules/body-parser/package.json
+7 verbose installManyTop reading scoped package data from /Users/ryandouglas/Dev/projects/bp-app/node_modules/bookshelf/package.json
+8 verbose installManyTop reading scoped package data from /Users/ryandouglas/Dev/projects/bp-app/node_modules/bower/package.json
+9 verbose installManyTop reading scoped package data from /Users/ryandouglas/Dev/projects/bp-app/node_modules/dotenv/package.json
+10 verbose installManyTop reading scoped package data from /Users/ryandouglas/Dev/projects/bp-app/node_modules/express/package.json
+11 verbose installManyTop reading scoped package data from /Users/ryandouglas/Dev/projects/bp-app/node_modules/knex/package.json
+12 verbose installManyTop reading scoped package data from /Users/ryandouglas/Dev/projects/bp-app/node_modules/passport/package.json
+13 verbose installManyTop reading scoped package data from /Users/ryandouglas/Dev/projects/bp-app/node_modules/passport-google-oauth2/package.json
+14 verbose readDependencies loading dependencies from /Users/ryandouglas/Dev/projects/bp-app/package.json
+15 silly cache add args [ 'postgres', null ]
+16 verbose cache add spec postgres
+17 silly cache add parsed spec Result {
+17 silly cache add   raw: 'postgres',
+17 silly cache add   scope: null,
+17 silly cache add   name: 'postgres',
+17 silly cache add   rawSpec: '',
+17 silly cache add   spec: 'latest',
+17 silly cache add   type: 'tag' }
+18 silly addNamed postgres@latest
+19 verbose addNamed "latest" is being treated as a dist-tag for postgres
+20 info addNameTag [ 'postgres', 'latest' ]
+21 silly mapToRegistry name postgres
+22 silly mapToRegistry using default registry
+23 silly mapToRegistry registry https://registry.npmjs.org/
+24 silly mapToRegistry uri https://registry.npmjs.org/postgres
+25 verbose addNameTag registry:https://registry.npmjs.org/postgres not in flight; fetching
+26 verbose request uri https://registry.npmjs.org/postgres
+27 verbose request no auth needed
+28 info attempt registry request try #1 at 10:50:51 AM
+29 verbose request id a5df1e3feea9cf48
+30 http request GET https://registry.npmjs.org/postgres
+31 http 200 https://registry.npmjs.org/postgres
+32 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+32 verbose headers   etag: '"647809U4Q7N40F8W8042QD9KL"',
+32 verbose headers   'content-type': 'application/json',
+32 verbose headers   'content-encoding': 'gzip',
+32 verbose headers   'cache-control': 'max-age=300',
+32 verbose headers   'content-length': '435',
+32 verbose headers   'accept-ranges': 'bytes',
+32 verbose headers   date: 'Tue, 31 May 2016 16:50:51 GMT',
+32 verbose headers   via: '1.1 varnish',
+32 verbose headers   age: '0',
+32 verbose headers   connection: 'keep-alive',
+32 verbose headers   'x-served-by': 'cache-dfw1821-DFW',
+32 verbose headers   'x-cache': 'MISS',
+32 verbose headers   'x-cache-hits': '0',
+32 verbose headers   'x-timer': 'S1464713451.586220,VS0,VE190',
+32 verbose headers   vary: 'Accept-Encoding' }
+33 silly get cb [ 200,
+33 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+33 silly get     etag: '"647809U4Q7N40F8W8042QD9KL"',
+33 silly get     'content-type': 'application/json',
+33 silly get     'content-encoding': 'gzip',
+33 silly get     'cache-control': 'max-age=300',
+33 silly get     'content-length': '435',
+33 silly get     'accept-ranges': 'bytes',
+33 silly get     date: 'Tue, 31 May 2016 16:50:51 GMT',
+33 silly get     via: '1.1 varnish',
+33 silly get     age: '0',
+33 silly get     connection: 'keep-alive',
+33 silly get     'x-served-by': 'cache-dfw1821-DFW',
+33 silly get     'x-cache': 'MISS',
+33 silly get     'x-cache-hits': '0',
+33 silly get     'x-timer': 'S1464713451.586220,VS0,VE190',
+33 silly get     vary: 'Accept-Encoding' } ]
+34 verbose get saving postgres to /Users/ryandouglas/.npm/registry.npmjs.org/postgres/.cache.json
+35 verbose correctMkdir /Users/ryandouglas/.npm correctMkdir not in flight; initializing
+36 silly addNameTag next cb for postgres with tag latest
+37 silly addNamed postgres@0.0.1
+38 verbose addNamed "0.0.1" is a plain semver version for postgres
+39 silly mapToRegistry name postgres
+40 silly mapToRegistry using default registry
+41 silly mapToRegistry registry https://registry.npmjs.org/
+42 silly mapToRegistry uri https://registry.npmjs.org/postgres
+43 verbose addRemoteTarball https://registry.npmjs.org/postgres/-/postgres-0.0.1.tgz not in flight; adding
+44 verbose addRemoteTarball [ 'https://registry.npmjs.org/postgres/-/postgres-0.0.1.tgz',
+44 verbose addRemoteTarball   '93aecd0a7fcf620792bcc2c87a2ead432adaa833' ]
+45 info retry fetch attempt 1 at 10:50:51 AM
+46 info attempt registry request try #1 at 10:50:51 AM
+47 http fetch GET https://registry.npmjs.org/postgres/-/postgres-0.0.1.tgz
+48 http fetch 200 https://registry.npmjs.org/postgres/-/postgres-0.0.1.tgz
+49 silly fetchAndShaCheck shasum 93aecd0a7fcf620792bcc2c87a2ead432adaa833
+50 verbose addTmpTarball /var/folders/lm/hql7t6p54q17cpm6z_tw_3x80000gn/T/npm-47422-dde1334d/registry.npmjs.org/postgres/-/postgres-0.0.1.tgz not in flight; adding
+51 verbose addTmpTarball already have metadata; skipping unpack for postgres@0.0.1
+52 verbose correctMkdir /Users/ryandouglas/.npm correctMkdir not in flight; initializing
+53 silly cache afterAdd postgres@0.0.1
+54 verbose afterAdd /Users/ryandouglas/.npm/postgres/0.0.1/package/package.json not in flight; writing
+55 verbose correctMkdir /Users/ryandouglas/.npm correctMkdir not in flight; initializing
+56 verbose afterAdd /Users/ryandouglas/.npm/postgres/0.0.1/package/package.json written
+57 silly install resolved [ { name: 'postgres',
+57 silly install resolved     version: '0.0.1',
+57 silly install resolved     description: 'very basic libpg binding to node',
+57 silly install resolved     author: { name: 'Ryan Dahl' },
+57 silly install resolved     main: './postgres',
+57 silly install resolved     scripts: { install: 'node-waf configure build' },
+57 silly install resolved     _id: 'postgres@0.0.1',
+57 silly install resolved     engines: { node: '*' },
+57 silly install resolved     _nodeSupported: true,
+57 silly install resolved     _npmVersion: '0.2.7-2',
+57 silly install resolved     _nodeVersion: 'v0.3.1-pre',
+57 silly install resolved     dist:
+57 silly install resolved      { tarball: 'https://registry.npmjs.org/postgres/-/postgres-0.0.1.tgz',
+57 silly install resolved        shasum: '93aecd0a7fcf620792bcc2c87a2ead432adaa833' },
+57 silly install resolved     directories: {},
+57 silly install resolved     _shasum: '93aecd0a7fcf620792bcc2c87a2ead432adaa833',
+57 silly install resolved     _resolved: 'https://registry.npmjs.org/postgres/-/postgres-0.0.1.tgz',
+57 silly install resolved     _from: 'postgres@latest' } ]
+58 info install postgres@0.0.1 into /Users/ryandouglas/Dev/projects/bp-app
+59 info installOne postgres@0.0.1
+60 verbose installOne of postgres to /Users/ryandouglas/Dev/projects/bp-app not in flight; installing
+61 verbose correctMkdir /Users/ryandouglas/.npm/_locks correctMkdir not in flight; initializing
+62 verbose lock using /Users/ryandouglas/.npm/_locks/postgres-febb34f6e4087630.lock for /Users/ryandouglas/Dev/projects/bp-app/node_modules/postgres
+63 silly install write writing postgres 0.0.1 to /Users/ryandouglas/Dev/projects/bp-app/node_modules/postgres
+64 verbose unbuild node_modules/postgres
+65 silly gentlyRm /Users/ryandouglas/Dev/projects/bp-app/node_modules/postgres is being purged from base /Users/ryandouglas/Dev/projects/bp-app
+66 verbose gentlyRm don't care about contents; nuking /Users/ryandouglas/Dev/projects/bp-app/node_modules/postgres
+67 verbose tar unpack /Users/ryandouglas/.npm/postgres/0.0.1/package.tgz
+68 verbose tar unpacking to /Users/ryandouglas/Dev/projects/bp-app/node_modules/postgres
+69 silly gentlyRm /Users/ryandouglas/Dev/projects/bp-app/node_modules/postgres is being purged
+70 verbose gentlyRm don't care about contents; nuking /Users/ryandouglas/Dev/projects/bp-app/node_modules/postgres
+71 silly gunzTarPerm modes [ '755', '644' ]
+72 silly gunzTarPerm extractEntry
+73 silly gunzTarPerm extractEntry .gitignore
+74 silly gunzTarPerm extractEntry ._.npmignore
+75 silly gunzTarPerm extractEntry .npmignore
+76 silly gunzTarPerm extractEntry binding.cc
+77 silly gunzTarPerm extractEntry LICENSE-MIT
+78 silly gunzTarPerm extractEntry ._package.json
+79 silly gunzTarPerm extractEntry package.json
+80 silly gunzTarPerm extractEntry postgres.js
+81 silly gunzTarPerm extractEntry README
+82 silly gunzTarPerm extractEntry test.js
+83 silly gunzTarPerm extractEntry type-oids.h
+84 silly gunzTarPerm extractEntry wscript
+85 verbose write writing to /Users/ryandouglas/Dev/projects/bp-app/node_modules/postgres/package.json
+86 info preinstall postgres@0.0.1
+87 verbose readDependencies loading dependencies from /Users/ryandouglas/Dev/projects/bp-app/node_modules/postgres/package.json
+88 verbose readDependencies loading dependencies from /Users/ryandouglas/Dev/projects/bp-app/node_modules/postgres/package.json
+89 silly install resolved []
+90 verbose about to build /Users/ryandouglas/Dev/projects/bp-app/node_modules/postgres
+91 info build /Users/ryandouglas/Dev/projects/bp-app/node_modules/postgres
+92 info linkStuff postgres@0.0.1
+93 silly linkStuff postgres@0.0.1 has /Users/ryandouglas/Dev/projects/bp-app/node_modules as its parent node_modules
+94 verbose linkBins postgres@0.0.1
+95 verbose linkMans postgres@0.0.1
+96 verbose rebuildBundles postgres@0.0.1
+97 info install postgres@0.0.1
+98 verbose unsafe-perm in lifecycle true
+99 info postgres@0.0.1 Failed to exec install script
+100 verbose unlock done using /Users/ryandouglas/.npm/_locks/postgres-febb34f6e4087630.lock for /Users/ryandouglas/Dev/projects/bp-app/node_modules/postgres
+101 verbose stack Error: postgres@0.0.1 install: `node-waf configure build`
+101 verbose stack spawn ENOENT
+101 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:17:16)
+101 verbose stack     at emitTwo (events.js:87:13)
+101 verbose stack     at ChildProcess.emit (events.js:172:7)
+101 verbose stack     at maybeClose (internal/child_process.js:827:16)
+101 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+102 verbose pkgid postgres@0.0.1
+103 verbose cwd /Users/ryandouglas/Dev/projects/bp-app
+104 error Darwin 15.4.0
+105 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "postgres" "-S"
+106 error node v4.4.0
+107 error npm  v2.14.20
+108 error file sh
+109 error code ELIFECYCLE
+110 error errno ENOENT
+111 error syscall spawn
+112 error postgres@0.0.1 install: `node-waf configure build`
+112 error spawn ENOENT
+113 error Failed at the postgres@0.0.1 install script 'node-waf configure build'.
+113 error This is most likely a problem with the postgres package,
+113 error not with npm itself.
+113 error Tell the author that this fails on your system:
+113 error     node-waf configure build
+113 error You can get information on how to open an issue for this project with:
+113 error     npm bugs postgres
+113 error Or if that isn't available, you can get their info via:
+113 error
+113 error     npm owner ls postgres
+113 error There is likely additional logging output above.
+114 verbose exit [ 1, true ]
+115 verbose unbuild node_modules/postgres
+116 info preuninstall postgres@0.0.1
+117 info uninstall postgres@0.0.1
+118 verbose unbuild rmStuff postgres@0.0.1 from /Users/ryandouglas/Dev/projects/bp-app/node_modules
+119 info postuninstall postgres@0.0.1
+120 silly gentlyRm /Users/ryandouglas/Dev/projects/bp-app/node_modules/postgres is being purged from base /Users/ryandouglas/Dev/projects/bp-app
+121 verbose gentlyRm don't care about contents; nuking /Users/ryandouglas/Dev/projects/bp-app/node_modules/postgres
+122 silly vacuum-fs purging /Users/ryandouglas/Dev/projects/bp-app/node_modules/postgres
+123 silly vacuum-fs quitting because other entries in /Users/ryandouglas/Dev/projects/bp-app/node_modules
