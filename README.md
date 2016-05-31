@@ -30,3 +30,14 @@ There are a few known quality-of-life issues that are still being worked on in a
 These will be patched out shortly.
 
 If any other issues are encountered, please create a new issue on this repository and they will be dealt with directly.
+
+<h3>Planned Features</h3>
+
+* Social Auth
+  * bp-bot will be complete with social authorization using Google+.
+* Filtering
+  * Filtering will be available for the readings table and will be reflected in the gauges
+* Styling
+  * Current styling is default Foundation. Future implementations will include custom styling
+* Body metrics & User creation
+  * These will be added to allow for differences between sexes and age to be taken into account for gauge thresholds
