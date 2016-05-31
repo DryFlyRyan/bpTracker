@@ -1,5 +1,5 @@
 {
-  "name": "bpBot",
+  "name": "bp-bot",
   "description": "A simple MEAN app for tracking blood pressure readings.",
   "main": "app/app.js",
   "authors": [
@@ -25,7 +25,8 @@
     "angular-moment": "^0.10.3",
     "moment": ">=2.8.0 <2.11.0",
     "foundation": "^5.5.3",
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "angular-google-chart": "^0.1.0"
   },
   "resolutions": {
     "angular-ui-router": "^0.2.18"

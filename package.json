@@ -1,11 +1,11 @@
 {
-  "name": "bpBot",
+  "name": "bp-bot",
   "version": "0.0.1",
   "description": "A simple MEAN app for tracking blood pressure readings.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "postinstall": "bower install"
   },
   "author": "Ryan Douglas",

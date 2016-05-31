@@ -1,0 +1,26 @@
+<section class="add-reading medium-10 medium-offset-1 panel callout clearfix">
+  <ul class="medium-block-grid-3">
+    <li class="small-12 medium-4">
+      <label>Systolic
+        <input style="width:100%;" type="text" placeholder="120" ng-model="systolic">
+      </label>
+    </li>
+    <li class="small-12 medium-4">
+      <label>Diastolic
+        <input style="width:100%;" type="text" placeholder="80" ng-model="diastolic">
+      </label>
+    </li>
+    <li class="small-12 medium-4">
+      <label>Beats Per Minute
+        <input style="width:100%;" type="text" placeholder="65" ng-model="bpm">
+      </label>
+    </li>
+  </ul>
+  <div class="row">
+
+  </div>
+  <div class="stack-for-small round primary button-group small-12 small-centered columns text-center">
+    <li><a ui-sref="home.dashboard" class="button">Cancel</a></li>
+    <li><a class="button" ng-click="setReading()">Submit</a></li>
+  </div>
+</section>

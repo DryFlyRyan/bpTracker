@@ -1,0 +1,13 @@
+.gauge-chart *{
+  height: 200px;
+  background: rgb(236, 250, 255);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.table-even {
+  background: #F9F9F9;
+}

@@ -1,0 +1,35 @@
+  <table class="small-10 small-offset-1" >
+    <thead>
+      <tr>
+        <th class="text-center">
+          Date
+        </th>
+        <th class="text-center">
+          Systolic
+        </th>
+        <th class="text-center">
+          Diastolic
+        </th>
+        <th class="text-center">
+          BPM
+        </th>
+      </tr>
+    </thead>
+    <tbody ng-repeat="reading in readings | orderBy: '-created_at'">
+      <tr ng-class-even="'table-even'">
+        <td class="text-center">
+          {{reading.created_at | amDateFormat:'dddd, MMMM Do YYYY, h:mm:ss a'}}
+        </td>
+        <td class="text-center">
+          {{reading.systolic}}
+        </td>
+        <td class="text-center">
+          {{reading.diastolic}}
+        </td>
+        <td class="text-center">
+          {{reading.beats_per_minute}}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

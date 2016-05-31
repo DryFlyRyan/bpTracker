@@ -1,13 +1,12 @@
 'use strict';
-console.log("Angular Starting Up");
 
-angular.module('bpBot', [
+angular.module('bp-bot', [
   'oc.lazyLoad',
   'ui.router',
   'ngAnimate',
-  'angularMoment'
+  'angularMoment',
+  'googlechart'
 ]).config(['$stateProvider','$urlRouterProvider','$ocLazyLoadProvider', '$locationProvider', function($stateProvider,$urlRouterProvider,$ocLazyLoadProvider, $locationProvider){
-  console.log("Lazy Loading");
 
   $ocLazyLoadProvider.config({
     debug:false,
@@ -26,7 +25,7 @@ angular.module('bpBot', [
           return $ocLazyLoad.load(
             {
               // Load Root CTRLs && SVCs
-              name: 'bpBot',
+              name: 'bp-bot',
               files: [
 
               ]
@@ -47,13 +46,42 @@ angular.module('bpBot', [
                 'bower_components/angular-moment/angular-moment.js'
               ]
             }
-          );
+          )
+          $ocLazyLoad.load(
+            {
+              name:'googlechart',
+              files:[
+                'bower_components/angular-google-chart/ng-google-chart.js'
+              ]
+            }
+          )
+
+        },
+        loadMyFiles:function($ocLazyLoad) {
+          return $ocLazyLoad.load({
+            name: 'gaugeChartConstructor',
+            files:[
+              'app/services/charts/gaugeChart/gaugeChartConstructor.js'
+            ]
+          }),
+          $ocLazyLoad.load({
+            name: 'gaugeChartBuilder',
+            files: [
+              'app/services/charts/gaugeChart/gaugeChartInstances.js'
+            ]
+          }),
+          $ocLazyLoad.load({
+            name: 'readingsGetter',
+            files:[
+              'app/services/http-services/GETReadings.js'
+            ]
+          })
         }
       }
     })
     .state('home.dashboard', {
       url:'/dashboard',
-      // controller: 'DashboardCTRL',
+      controller: 'DashboardCTRL',
       templateUrl:'app/dashboard/dashboard.html',
       resolve: {
         loadMyFiles:function($ocLazyLoad) {
@@ -65,6 +93,32 @@ angular.module('bpBot', [
           })
         }
       }
+    })
+    .state('home.newReading', {
+      url:'/readings/new',
+      controller: 'newReadingCTRL',
+      templateUrl:'app/newReading/newReading.html',
+      resolve: {
+        loadMyFiles:function($ocLazyLoad) {
+          return $ocLazyLoad.load({
+            name: 'newReading',
+            files:[
+              'app/newReading/newReading.js'
+            ]
+          }),
+          $ocLazyLoad.load({
+            name: 'readingSetter',
+            files:[
+              'app/services/http-services/POSTNewReading.js'
+            ]
+          })
+        }
+      }
+    })
+    .state('home.dashboard.listReadings', {
+      url:'',
+      controller: 'DashboardCTRL',
+      templateUrl:'app/listReadings/listReadings.html'
     })
     .state('home.login', {
       url:'/login',

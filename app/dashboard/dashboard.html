@@ -1,14 +1,22 @@
-<main>
-  <div class="">
-
-  </div>
-  <div class="panel callout clearfix">
-    <h1 class="small-offset-4 large-offset-0 small-4 text-center large-text-left">BP BOT</h1>
-  </div>
-  <div class="row">
-
-  </div>
+<main ng-init="getReadings()">
   <section>
+    <div class="dashboard panel callout clearfix medium-10 medium-offset-1">
+      <h2>30 Day Running Average</h2>
+      <ul class="small-block-grid-1 medium-block-grid-3">
+        <li google-chart class="gauge-chart" chart="systolicGaugeChart"></li>
+        <li google-chart class="gauge-chart" chart="diastolicGaugeChart"></li>
+        <li google-chart class="gauge-chart" chart="bpmGaugeChart"></li>
+      </ul>
+    </div>
+      <div ui-view>
 
+      </div>
+    <div class="dashboard panel callout clearfix medium-10 medium-offset-1">
+      <ul class="stack-for-small round primary button-group small-12 small-centered columns text-center">
+        <li><a ui-sref="home.newReading" class="button">Add a Reading</a></li>
+        <li><a ui-sref="home.dashboard.listReadings" class="button">Search Previous Readings</a></li>
+        <li><a href="#" class="button">Update Body Metrics</a></li>
+      </ul>
+    </div>
   </section>
 </main>
