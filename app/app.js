@@ -13,12 +13,11 @@ angular.module('bp-bot', [
     events:true
   })
 
-  // $urlRouterProvider.otherwise('/dashboard/home');
-
+  $urlRouterProvider.otherwise('/dashboard/home');
 
   $stateProvider
     .state('home', {
-      url:'',
+      url:'/dashboard',
       templateUrl: 'app/home/home.html',
       resolve: {
         loadMyDirectives:function($ocLazyLoad){
@@ -80,7 +79,7 @@ angular.module('bp-bot', [
       }
     })
     .state('home.dashboard', {
-      url:'/dashboard',
+      url:'/home',
       controller: 'DashboardCTRL',
       templateUrl:'app/dashboard/dashboard.html',
       resolve: {

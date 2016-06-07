@@ -1,5 +1,5 @@
 angular.module('bp-bot')
-  .controller('DashboardCTRL', ['$scope', 'gaugeChartBuilder', 'readingsGetterFactory', function($scope,  gaugeChartBuilder, readingsGetterFactory){
+  .controller('DashboardCTRL', ['$scope', 'gaugeChartBuilder', 'readingsGetterFactory', function($scope, gaugeChartBuilder, readingsGetterFactory){
 
     (function() {
       var formattedReadings = []
@@ -29,5 +29,20 @@ angular.module('bp-bot')
       $scope.diastolicGaugeChart = gaugeChartBuilder.createDiastolicChart(Math.floor(average('diastolic')))
       $scope.bpmGaugeChart = gaugeChartBuilder.createBPMChart(Math.floor(average('beats_per_minute')))
     }
+
+    $scope.sortReadingsTable = function(filter) {
+      if ($scope.readingsTableSorter.substr(1) === filter) {
+        if ($scope.readingsTableSorter.substr(0,1) === '+') {
+          $scope.readingsTableSorter = '-' + filter;
+        } else if ($scope.readingsTableSorter.substr(0,1) === '-') {
+          $scope.readingsTableSorter = '+' + filter
+        }
+      } else {
+        $scope.readingsTableSorter = '-' + filter
+      }
+      console.log($scope.readingsTableSorter);
+    }
+
+    $scope.readingsTableSorter = '+created_at'
 
   }])

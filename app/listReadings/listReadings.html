@@ -2,20 +2,20 @@
     <thead>
       <tr>
         <th class="text-center">
-          Date
+          <a ng-click="sortReadingsTable('created_at')">Date</a>
         </th>
         <th class="text-center">
-          Systolic
+          <a ng-click="sortReadingsTable('systolic')">Systolic</a>
         </th>
         <th class="text-center">
-          Diastolic
+          <a ng-click="sortReadingsTable('diastolic')">Diastolic</a>
         </th>
         <th class="text-center">
-          BPM
+          <a ng-click="sortReadingsTable('beats_per_minute')">BPM</a>
         </th>
       </tr>
     </thead>
-    <tbody ng-repeat="reading in readings | orderBy: '-created_at'">
+    <tbody ng-repeat="reading in readings | orderBy: readingsTableSorter">
       <tr ng-class-even="'table-even'">
         <td class="text-center">
           {{reading.created_at | amDateFormat:'dddd, MMMM Do YYYY, h:mm:ss a'}}
